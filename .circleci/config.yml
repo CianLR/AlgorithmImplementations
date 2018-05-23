@@ -1,7 +1,7 @@
 
 version: 2
 jobs:
-  build:
+  python_test:
     docker:
       - image: circleci/python:2.7
     
@@ -10,8 +10,41 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Unit tests
+          name: Run tests
           command: |
             cd python
             python -m unittest discover -v
+  cpp_test:
+    docker:
+      - image: alpine:3.6
+
+    working_directory: ~/repo
+    
+    steps:
+      - run:
+          name: Install packages
+          command: |
+            apk add --no-cache -q -f git cmake make g++
+
+      - run:
+          name: Install Google Test
+          command: |
+            git clone http://github.com/google/googletest.git
+            cd googletest
+            git checkout release-1.8.0
+            mkdir -p build
+            cd build
+            cmake ..
+            make
+            make install
+            cd ../../
+            rm -rf googletest
+
+      - checkout
+
+      - run:
+          name: Run tests
+          command: |
+            cd cpp
+            make test
 
