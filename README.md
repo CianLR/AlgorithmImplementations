@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/CianLR/AlgorithmImplementations/tree/master.svg?style=svg)](https://circleci.com/gh/CianLR/AlgorithmImplementations/tree/master)
+# Competitive Programming Algorithms
+[![CircleCI](https://circleci.com/gh/CianLR/AlgorithmImplementations/tree/master.svg?style=shield)](https://circleci.com/gh/CianLR/AlgorithmImplementations/tree/master)
 
-# AlgorithmImplementations
 C++ and Python implementations of various algorithms for competitive programming.
 
 # Requires
