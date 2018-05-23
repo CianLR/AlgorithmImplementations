@@ -48,3 +48,10 @@ jobs:
             cd cpp
             make test
 
+workflows:
+  version: 2
+  test:
+    jobs:
+      - python_test
+      - cpp_test
+
