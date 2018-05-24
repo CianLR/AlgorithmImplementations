@@ -24,10 +24,10 @@ TEST(DFSTest, TestMultiNodes) {
 
   // Start at 1, node 3 is reachable byt 2 isn't.
   ASSERT_EQ(DFS(4, graph, 1, 40), 3);
-  ASSERT_EQ(DFS(4, graph, 1, 30), -1); 
-  
+  ASSERT_EQ(DFS(4, graph, 1, 30), -1);
+
   // Start at 3, nothing reachable expect itself.
   ASSERT_EQ(DFS(4, graph, 3, 40), 3);
-  ASSERT_EQ(DFS(4, graph, 3, 30), -1); 
+  ASSERT_EQ(DFS(4, graph, 3, 30), -1);
 }
 

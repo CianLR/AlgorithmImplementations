@@ -7,7 +7,7 @@ class TestBFS(unittest.TestCase):
         n = Node(0)
         self.assertIs(BFS(n, 1), None)
         self.assertIs(BFS(n, 0), n)
-    
+
     def test_multi_node(self):
         graph = [Node(i) for i in xrange(10, 50, 10)]
         graph[0].add_adj(graph[1])

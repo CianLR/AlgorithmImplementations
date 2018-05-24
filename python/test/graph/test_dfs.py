@@ -7,7 +7,7 @@ class DFSTest(unittest.TestCase):
         n = Node(1)
         self.assertIs(DFS(n, 1), n)
         self.assertIs(DFS(n, 0), None)
-    
+
     def test_multi_node(self):
         graph = [Node(i) for i in xrange(10, 50, 10)]
         graph[0].add_adj(graph[1])
