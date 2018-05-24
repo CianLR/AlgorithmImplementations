@@ -4,7 +4,7 @@ CXXFLAGS  = -std=c++14 -O2
 LIBS      = -lgtest -lgtest_main
 BUILD_DIR = build
 
-ALL_TESTS := $(shell find test/ | grep \.cc$ )
+ALL_TESTS := $(shell find test/ | grep \.cc$$)
 
 test: algo_test
 	./$(BUILD_DIR)/algo_test

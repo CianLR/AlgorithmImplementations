@@ -5,7 +5,7 @@ class Node:
         self.i = i
         self.adj = []
 
-    def AddAdj(self, v):
+    def add_adj(self, v):
         self.adj.append(v)
 
 

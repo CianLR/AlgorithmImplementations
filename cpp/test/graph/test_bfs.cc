@@ -20,7 +20,7 @@ TEST(BFSTest, TestMultiNodes) {
   graph[1].AddAdj(3);
   graph[2].AddAdj(3);
 
-  // Start at 0 and traverse normally
+  // Start at 0 and traverse normally.
   ASSERT_EQ(BFS(graph, 0, 40), 3);
   ASSERT_EQ(BFS(graph, 0, 30), 2);
 
