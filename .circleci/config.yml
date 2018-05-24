@@ -12,8 +12,8 @@ jobs:
       - run:
           name: Run tests
           command: |
-            cd python
-            python -m unittest discover -v
+            make python_test
+  
   cpp_test:
     docker:
       - image: alpine:3.6
@@ -45,8 +45,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            cd cpp
-            make test
+            make cpp_test
 
 workflows:
   version: 2
