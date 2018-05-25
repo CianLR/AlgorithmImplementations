@@ -1,6 +1,6 @@
 
 CXX       = g++
-CXXFLAGS  = -std=c++14 -O2
+CXXFLAGS  = -std=c++14 -O2 -Wall
 LIBS      = -lgtest -lgtest_main
 BUILD_DIR = build
 
