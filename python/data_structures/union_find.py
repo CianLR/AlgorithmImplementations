@@ -3,7 +3,7 @@ class UnionFind:
     def __init__(self, N):
         self.N = N
         self.parent = range(N)
-        self.size = [0] * N
+        self.size = [1] * N
 
     def _root(self, a):
         while a != self.parent[a]:
