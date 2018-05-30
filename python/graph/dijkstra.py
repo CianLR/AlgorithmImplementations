@@ -1,5 +1,6 @@
 import heapq
 
+
 class Node:
     def __init__(self, i):
         self.i = i
@@ -24,4 +25,3 @@ def Dijkstra(start, end):
             dist[v] = d + c
             heapq.heappush(pq, (d + c, v))
     return -1
-

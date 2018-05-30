@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Node:
     def __init__(self, i):
         self.i = i
@@ -21,4 +22,3 @@ def DFS(start, find):
                 seen.add(v)
                 q.append(v)
     return None
-
