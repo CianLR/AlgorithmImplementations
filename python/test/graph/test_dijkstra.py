@@ -2,6 +2,7 @@ import unittest
 
 from graph.dijkstra import Node, Dijkstra
 
+
 class DijkstraTest(unittest.TestCase):
     def test_single_node(self):
         n = Node(1)
@@ -18,4 +19,3 @@ class DijkstraTest(unittest.TestCase):
         self.assertEqual(Dijkstra(nodes[0], 40), 5)
         self.assertEqual(Dijkstra(nodes[0], 50), -1)
         self.assertEqual(Dijkstra(nodes[2], 40), 1)
-

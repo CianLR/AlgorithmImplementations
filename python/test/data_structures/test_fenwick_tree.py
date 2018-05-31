@@ -2,6 +2,7 @@ import unittest
 
 from data_structures.fenwick_tree import FenwickTree
 
+
 class FenwickTreeTest(unittest.TestCase):
     def test_all_empty(self):
         ft = FenwickTree(10)
@@ -18,7 +19,6 @@ class FenwickTreeTest(unittest.TestCase):
         for i in xrange(6):
             self.assertEqual(ft.sum_to(i), sum(eg_array[:i + 1]))
 
-    
     def test_sum_range(self):
         ft = FenwickTree(6)
         eg_array = [23, 12, -43, 21, 2, 9]
@@ -28,7 +28,7 @@ class FenwickTreeTest(unittest.TestCase):
             for j in xrange(i + 1, 6):
                 self.assertEqual(ft.sum_range(i, j),
                                  sum(eg_array[i + 1:j + 1]))
-    
+
     def test_random_insertion_order(self):
         ft1, ft2 = FenwickTree(6), FenwickTree(6)
         eg_array = [-17, 12, 39, 11, 26, -18]
@@ -42,4 +42,3 @@ class FenwickTreeTest(unittest.TestCase):
         # Check that order doesn't matter
         for i in xrange(6):
             self.assertEqual(ft1.sum_to(i), ft2.sum_to(i))
-

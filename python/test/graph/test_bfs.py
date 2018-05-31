@@ -2,6 +2,7 @@ import unittest
 
 from graph.bfs import Node, BFS
 
+
 class TestBFS(unittest.TestCase):
     def test_single_node(self):
         n = Node(0)
@@ -24,4 +25,3 @@ class TestBFS(unittest.TestCase):
         # Start at 3, nowhere reachable except itself.
         self.assertIs(BFS(graph[3], 40), graph[3])
         self.assertIs(BFS(graph[3], 30), None)
-
