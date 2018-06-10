@@ -23,5 +23,3 @@ class UnionFind:
             a, b = b, a  # Ensure a is the bigger tree
         self.size[a] += self.size[b]
         self.parent[b] = a
-
-

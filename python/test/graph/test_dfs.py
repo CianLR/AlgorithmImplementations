@@ -2,6 +2,7 @@ import unittest
 
 from graph.dfs import Node, DFS
 
+
 class DFSTest(unittest.TestCase):
     def test_single_node(self):
         n = Node(1)
@@ -24,4 +25,3 @@ class DFSTest(unittest.TestCase):
         # Start at 3, nowhere reachable except itself.
         self.assertIs(DFS(graph[3], 40), graph[3])
         self.assertIs(DFS(graph[3], 30), None)
-

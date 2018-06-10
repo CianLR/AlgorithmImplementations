@@ -28,4 +28,3 @@ class FenwickTree:
         Sums from (i, ..., j].
         """
         return self.sum_to(j) - self.sum_to(i)
-

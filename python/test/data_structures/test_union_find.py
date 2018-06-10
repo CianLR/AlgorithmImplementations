@@ -2,6 +2,7 @@ import unittest
 
 from data_structures.union_find import UnionFind
 
+
 class UnionFindTest(unittest.TestCase):
     def test_all_disjoint(self):
         n = 10
@@ -31,4 +32,3 @@ class UnionFindTest(unittest.TestCase):
         uf.join(8, 3)
         self.assertTrue(uf.is_joined(1, 8))
         self.assertTrue(uf.is_joined(4, 8))
-
