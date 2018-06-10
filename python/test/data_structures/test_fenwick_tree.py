@@ -10,6 +10,15 @@ class FenwickTreeTest(unittest.TestCase):
             for j in xrange(i + 1, 10):
                 self.assertEqual(ft.sum_range(i, j), 0)
 
+    def test_end_elements(self):
+        ft = FenwickTree(10)
+        ft.add(9, 1)
+        self.assertEqual(ft.sum_to(9), 1)
+
+        ft = FenwickTree(10)
+        ft.add(0, 1)
+        self.assertEqual(ft.sum_to(0), 1)
+
     def test_sum_to(self):
         ft = FenwickTree(6)
         eg_array = [1, 4, -5, 2, 7, 4]

@@ -6,12 +6,12 @@ class FenwickTree:
     Is 1-indexed internally but presents a 0-indexed interface.
     """
     def __init__(self, n):
-        self.n = n + 1
+        self.n = n
         self.arr = [0] * (n + 1)
 
     def add(self, i, v):
         i += 1
-        while i < self.n:
+        while i <= self.n:
             self.arr[i] += v
             i += i & -i
 
